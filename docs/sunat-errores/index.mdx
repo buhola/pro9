@@ -1,0 +1,70 @@
+---
+sidebar_position: 1
+sidebar_label: Catálogo
+title: Catálogo de errores SUNAT
+slug: /sunat-errores/
+description: Códigos de error, rechazo y observación de SUNAT y OSE, agrupados por tipo y categoría.
+sidebar_custom_props:
+  icon: book
+---
+
+import TypeCards from '@site/src/components/TypeCards';
+
+# Catálogo de errores SUNAT
+
+Cuando Pro 9 envía un comprobante, SUNAT (o el OSE) responde con un **código numérico**. Ese código dice si el envío falló, si el XML se rechazó o si el documento se aceptó con observaciones.
+
+El menú de la izquierda es **solo de errores SUNAT**. Las novedades de Pro 9 están en su propio menú.
+
+:::note[SUNAT]
+Catálogo de códigos de la facturación electrónica de **SUNAT**. Aplica al envío directo a SUNAT y al envío a través de un **OSE**.
+:::
+
+<TypeCards />
+
+## Por tipo
+
+- [Errores de servicio](/sunat-errores/servicio) — autenticación, ZIP y lote
+- [Rechazos](/sunat-errores/rechazos) — estructura XML y reglas de negocio
+- [Observaciones](/sunat-errores/observaciones) — aceptado con aviso
+
+## Categorías
+
+| Categoría | Códigos | Tipo |
+| --- | --- | --- |
+| [Servicio, autenticación y envío](/sunat-errores/servicio-envio) | 0100–0499 | Error de servicio |
+| [Estructura del XML](/sunat-errores/estructura-xml) | 1000–1999 | Rechazo |
+| [Facturas: emisor, ítems e impuestos](/sunat-errores/facturas) | 2000–2099 | Rechazo |
+| [Notas de crédito y débito](/sunat-errores/notas-credito-debito) | 2100–2209 | Rechazo |
+| [Resúmenes diarios y bajas](/sunat-errores/resumenes-bajas) | 2210–2324 | Rechazo |
+| [Certificado, plazos y homologación](/sunat-errores/certificados-plazos) | 2325–2399 | Rechazo |
+| [Boletas y reglas generales](/sunat-errores/boletas-reglas) | 2400–2499 | Rechazo |
+| [Anticipos y guías de remisión](/sunat-errores/anticipos-guias) | 2500–2599 | Rechazo |
+| [Validaciones adicionales](/sunat-errores/validaciones-adicionales) | 2600–2699 | Rechazo |
+| [Cambio de moneda, GRE y percepción](/sunat-errores/documentos-relacionados) | 2700–2799 | Rechazo |
+| [Percepción, IVAP y receptor](/sunat-errores/percepcion-ivap) | 2800–2899 | Rechazo |
+| [Servicios públicos](/sunat-errores/servicios-publicos) | 2900–2999 | Rechazo |
+| [UBL 2.1 y catálogos](/sunat-errores/ubl-catalogos) | 3000–3099 | Rechazo |
+| [Tributos y tipos de operación](/sunat-errores/tributos-operaciones) | 3100–3199 | Rechazo |
+| [Notas y operación UBL 2.1](/sunat-errores/notas-ubl21) | 3200–3999 | Rechazo |
+| [Observaciones generales](/sunat-errores/observaciones-generales) | 4000–4099 | Observación |
+| [Observaciones de guías y traslado](/sunat-errores/observaciones-guias) | 4100–4199 | Observación |
+| [Observaciones de totales y cálculos](/sunat-errores/observaciones-totales) | 4200–4338 | Observación |
+
+## Códigos que suelen verse primero
+
+| Código | Qué suele significar |
+| --- | --- |
+| `0100` | SUNAT no pudo responder. Reintentar. |
+| `0102` / `0103` / `0104` | Usuario o clave SOL incorrectos. |
+| `0111` / `0113` | El usuario no está afiliado o no tiene perfil de factura electrónica. |
+| `0154` | El RUC del XML no coincide con el usuario que envía. |
+| `0402` | Esa serie-número ya fue enviada. |
+| `1032` / `1033` | El comprobante ya estaba informado (anulado/rechazado o con otros datos). |
+| `2010` / `2011` | El contribuyente no está activo o no está habido. |
+| `2325`–`2328` | Problema con el certificado digital (baja, vencido o revocado). |
+| `2329` | Fecha de emisión fuera del plazo permitido. |
+| `2396` | Monto mayor a S/ 700 sin documento de identidad del cliente. |
+| `4000+` | Aceptado con observación: revisa el detalle, no es un rechazo. |
+
+Usa la búsqueda del sitio (o `Ctrl` + `K`) para localizar un código concreto.

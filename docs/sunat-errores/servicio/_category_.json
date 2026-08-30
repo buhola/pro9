@@ -1,0 +1,14 @@
+{
+  "label": "Error de servicio",
+  "position": 2,
+  "collapsed": false,
+  "customProps": {
+    "icon": "cloud-off"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Errores de servicio",
+    "description": "El envío no se procesó: autenticación SOL, ZIP, lote o ticket. Códigos 0100–0499.",
+    "slug": "/sunat-errores/servicio"
+  }
+}

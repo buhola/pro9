@@ -1,0 +1,14 @@
+{
+  "label": "Observaciones",
+  "position": 4,
+  "collapsed": true,
+  "customProps": {
+    "icon": "alert"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Observaciones SUNAT",
+    "description": "El comprobante sí se acepta, con avisos. Códigos 4000–4338.",
+    "slug": "/sunat-errores/observaciones"
+  }
+}

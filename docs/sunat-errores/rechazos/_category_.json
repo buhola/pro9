@@ -1,0 +1,14 @@
+{
+  "label": "Rechazos",
+  "position": 3,
+  "collapsed": true,
+  "customProps": {
+    "icon": "x"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Rechazos SUNAT",
+    "description": "El comprobante no es aceptado. Códigos 1000–3999: estructura XML y reglas de negocio.",
+    "slug": "/sunat-errores/rechazos"
+  }
+}
