@@ -1,0 +1,14 @@
+{
+  "label": "Comunicación",
+  "position": 5,
+  "collapsed": true,
+  "customProps": {
+    "icon": "message"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Comunicación",
+    "description": "WhatsApp (Evolution y WAHA) y notificaciones en tiempo real.",
+    "slug": "/novedades/comunicacion"
+  }
+}

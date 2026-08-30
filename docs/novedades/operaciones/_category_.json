@@ -1,0 +1,14 @@
+{
+  "label": "Operaciones",
+  "position": 4,
+  "collapsed": false,
+  "customProps": {
+    "icon": "package"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Operaciones",
+    "description": "Productos, inventario, comprobantes electrónicos, plantillas PDF y guías de remisión.",
+    "slug": "/novedades/operaciones"
+  }
+}

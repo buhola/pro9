@@ -1,0 +1,14 @@
+{
+  "label": "Gestión e interfaz",
+  "position": 6,
+  "collapsed": true,
+  "customProps": {
+    "icon": "settings"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Gestión e interfaz",
+    "description": "Dashboard, clientes, finanzas, compras, administración, API y experiencia de uso.",
+    "slug": "/novedades/gestion"
+  }
+}

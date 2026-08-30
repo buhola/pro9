@@ -1,0 +1,14 @@
+{
+  "label": "Ventas y canales",
+  "position": 3,
+  "collapsed": false,
+  "customProps": {
+    "icon": "bag"
+  },
+  "link": {
+    "type": "generated-index",
+    "title": "Ventas y canales",
+    "description": "Tienda virtual, marketplace, pagos en línea, POS, Vendeya y Mozo.",
+    "slug": "/novedades/ventas"
+  }
+}
