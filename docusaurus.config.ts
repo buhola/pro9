@@ -2,6 +2,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const organizationName = 'buhola';
+const projectName = 'pro9';
+
 const config: Config = {
   title: 'Pro 9',
   tagline: 'Novedades del sistema y códigos de error SUNAT',
@@ -11,8 +14,12 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  url: `https://${organizationName}.github.io`,
+  baseUrl: `/${projectName}/`,
+  organizationName,
+  projectName,
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
@@ -57,7 +64,13 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
-        {to: '/', label: 'Inicio', position: 'left', exact: true, activeBaseRegex: '^/$'},
+        {
+          to: '/',
+          label: 'Inicio',
+          position: 'left',
+          exact: true,
+          activeBaseRegex: `^/${projectName}/?$`,
+        },
         {
           type: 'docSidebar',
           sidebarId: 'novedadesSidebar',
