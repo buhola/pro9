@@ -23,6 +23,7 @@
   --pro9-muted: #64748b;
   --pro9-card: #ffffff;
   --pro9-ring: rgba(37, 99, 235, 0.18);
+  --ifm-navbar-sidebar-width: min(22rem, 86vw);
 }
 
 [data-theme='dark'] {
@@ -41,13 +42,13 @@
   --pro9-ring: rgba(96, 165, 250, 0.28);
 }
 
-.navbar {
-  backdrop-filter: blur(10px);
-}
-
 .navbar__title {
   font-weight: 800;
   letter-spacing: -0.03em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .iconLabel,
@@ -86,14 +87,22 @@
 }
 
 .markdown table {
-  display: table;
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   font-size: 0.92rem;
 }
 
 .markdown table code {
   white-space: nowrap;
   font-size: 0.85em;
+}
+
+.theme-doc-markdown {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .markdown table tbody tr:nth-child(even) {
@@ -152,6 +161,7 @@
 
 .homeCard {
   display: block;
+  min-width: 0;
   padding: 1.35rem 1.4rem 1.25rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 16px;
@@ -213,6 +223,7 @@
 }
 
 .typeCard {
+  min-width: 0;
   padding: 0.95rem 1rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 12px;
@@ -264,8 +275,123 @@ html:has(.homePage) .theme-doc-footer {
   display: none;
 }
 
-html:has(.homePage) main .container .row .col {
-  max-width: 920px !important;
-  flex: 0 0 auto !important;
+html:has(.homePage) main .container .row > .col {
+  max-width: 100% !important;
+  flex: 1 1 100% !important;
+  padding-inline: 0;
+}
+
+html:has(.homePage) .theme-doc-markdown {
+  max-width: 920px;
   margin-inline: auto;
+}
+
+.homePage {
+  padding-bottom: 2.5rem;
+}
+
+.navbar-sidebar,
+.navbar-sidebar__backdrop {
+  z-index: calc(var(--ifm-z-index-fixed) + 2);
+}
+
+.navbar-sidebar .menu__link,
+.navbar-sidebar .iconLabel {
+  min-height: 44px;
+}
+
+.navbar-sidebar .iconLabel {
+  font-size: 1rem;
+  gap: 0.65rem;
+}
+
+/* Tablet: el navbar con iconos no cabe; pasa al menú hamburguesa antes que Infima (996px). */
+@media (max-width: 1100px) {
+  .navbar__toggle {
+    display: inherit;
+  }
+
+  .navbar__inner .navbar__item {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .homeCard:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 996px) {
+  .homeHero {
+    padding-top: 0.35rem;
+  }
+
+  .homeHero h1 {
+    max-width: none;
+    font-size: clamp(1.55rem, 8vw, 2.35rem);
+  }
+
+  .homeLead {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .homeGrid,
+  .typeGrid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .homeCard {
+    padding: 1.1rem 1.15rem;
+  }
+
+  .homeMeta {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .markdown table {
+    font-size: 0.85rem;
+  }
+
+  .pagination-nav {
+    margin-top: 1.75rem;
+  }
+
+  html:has(.homePage) main .container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --ifm-navbar-height: 3.25rem;
+    --ifm-spacing-horizontal: 0.85rem;
+  }
+
+  .homeEyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+  }
+
+  .homeCard h2 {
+    font-size: 1.2rem;
+  }
+
+  .typeCard {
+    padding: 0.85rem 0.9rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 996px) {
+  .homeGrid,
+  .typeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  html:has(.homePage) main .container {
+    padding-inline: 1.35rem;
+  }
 }
