@@ -54,12 +54,15 @@ export function pushDocs(remote = config.docsRemote, branch = config.docsBranch)
   let pushCmd = `git push ${remote} ${branch}`;
   let options = {};
   if (process.env.GITHUB_USER && process.env.GITHUB_TOKEN && remote === 'origin') {
-    pushCmd = `git push "https://${process.env.GITHUB_USER}:${process.env.GITHUB_TOKEN}@github.com/buhola/pro9.git" ${branch}`;
+    pushCmd = `git push "https://${process.env.GITHUB_USER}:${process.env.GITHUB_TOKEN}@github.com/buhola/pro9.git" ${branch}:${branch}`;
     options = { silent: true };
   }
   const res = runCommand(pushCmd, options);
   if (!res.success) {
     throw new Error(`Error al hacer push a ${remote}/${branch}: ${res.stderr || res.error}`);
+  }
+  if (process.env.GITHUB_USER && process.env.GITHUB_TOKEN && remote === 'origin') {
+    runCommand(`git fetch "https://${process.env.GITHUB_USER}:${process.env.GITHUB_TOKEN}@github.com/buhola/pro9.git" ${branch}:${remote}/${branch}`, { silent: true });
   }
   console.log(`✅ [Git] Push completado exitosamente.`);
   return true;
