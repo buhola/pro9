@@ -84,107 +84,130 @@ export function updateDestacadosDoc({ startDateStr = '29 de junio', endDateStr, 
   fs.writeFileSync(filePath, content, 'utf-8');
 }
 
-export function updateCronologiaDoc(itemsByDate, { endDateFormatted }) {
+const SPANISH_MONTH_MAP = {
+  enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6,
+  julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12
+};
+
+export function updateCronologiaDoc(itemsByDate = {}, { endDateFormatted } = {}) {
   const filePath = path.resolve(NOVEDADES_DIR, 'cronologia.md');
   if (!fs.existsSync(filePath)) return;
 
   let content = fs.readFileSync(filePath, 'utf-8');
 
-  // Agrupar itemsByDate por Mes Año (ej: "Agosto 2026", "Septiembre 2026", "Octubre 2026")
-  const groupedByMonth = {};
-  for (const [dateKey, items] of Object.entries(itemsByDate)) {
-    const dInfo = parseDate(items[0].date);
-    const monthHeading = `### ${dInfo.monthLong} ${dInfo.year}`;
-    if (!groupedByMonth[monthHeading]) {
-      groupedByMonth[monthHeading] = [];
+  // Separar cabecera y pie de página
+  const firstHeadingIdx = content.indexOf('### ');
+  const footerIdx = content.lastIndexOf('---');
+
+  let header = firstHeadingIdx !== -1 ? content.slice(0, firstHeadingIdx) : content;
+  let footer = footerIdx !== -1 ? content.slice(footerIdx) : '';
+  let body = firstHeadingIdx !== -1 && footerIdx !== -1 ? content.slice(firstHeadingIdx, footerIdx) : '';
+
+  // Actualizar texto introductorio en el header
+  header = header.replace(
+    /Las entregas más importantes, en el orden en que salieron\./,
+    'Las entregas más importantes, ordenadas de la más reciente a la más antigua.'
+  );
+
+  // Extraer secciones existentes
+  const sectionsMap = new Map();
+  const rawSections = body.split(/(?=### )/).map((s) => s.trim()).filter(Boolean);
+
+  for (const sec of rawSections) {
+    const match = sec.match(/^###\s+([A-Za-záéíóúñ]+)\s+(\d{4})/i);
+    if (!match) continue;
+    const monthName = match[1];
+    const year = parseInt(match[2], 10);
+    const monthNum = SPANISH_MONTH_MAP[monthName.toLowerCase()] || 0;
+    const sortKey = year * 100 + monthNum;
+
+    const rowsByDay = new Map();
+    const rowRegex = /\|\s*(\d+)\s+([a-záéíóúñ]+)\s*\|\s*([^|\n]+)\s*\|/gi;
+    let rMatch;
+    while ((rMatch = rowRegex.exec(sec)) !== null) {
+      const dayNum = parseInt(rMatch[1], 10);
+      rowsByDay.set(dayNum, {
+        dayNum,
+        displayDate: `${rMatch[1]} ${rMatch[2]}`,
+        text: rMatch[3].trim(),
+      });
     }
-    groupedByMonth[monthHeading].push({
-      displayDate: dInfo.displayDate,
-      dayNumber: parseInt(dInfo.day, 10),
-      items,
+
+    sectionsMap.set(sortKey, {
+      heading: `### ${monthName} ${year}`,
+      monthName,
+      year,
+      sortKey,
+      rowsByDay,
     });
   }
 
-  for (const [monthHeading, days] of Object.entries(groupedByMonth)) {
-    if (content.includes(monthHeading)) {
-      // Mes existente: extraer filas existentes, combinar con las nuevas y ordenar por número de día
-      const monthIndex = content.indexOf(monthHeading);
-      const nextHeadingIndex = content.indexOf('### ', monthIndex + monthHeading.length);
-      const searchLimit = nextHeadingIndex !== -1 ? nextHeadingIndex : content.lastIndexOf('---');
-      const sectionText = content.slice(monthIndex, searchLimit);
+  // Agrupar e incorporar nuevos items si fueron provistos
+  for (const [dateKey, items] of Object.entries(itemsByDate)) {
+    if (!items || items.length === 0) continue;
+    const dInfo = parseDate(items[0].date);
+    const monthNum = SPANISH_MONTH_MAP[dInfo.monthLong.toLowerCase()] || 0;
+    const year = parseInt(dInfo.year, 10);
+    const sortKey = year * 100 + monthNum;
+    const dayNumber = parseInt(dInfo.day, 10);
 
-      // Extraer filas actuales
-      const rowsByDay = new Map();
-      const rowRegex = /\|\s*(\d+)\s+([a-z]+)\s*\|\s*([^|\n]+)\s*\|/gi;
-      let match;
-      while ((match = rowRegex.exec(sectionText)) !== null) {
-        const dayNum = parseInt(match[1], 10);
-        const dayText = `${match[1]} ${match[2]}`;
-        const delivery = match[3].trim();
-        rowsByDay.set(dayNum, { displayDate: dayText, text: delivery });
-      }
-
-      // Agregar o actualizar con los nuevos días
-      for (const day of days) {
-        const deliveryText = day.items
-          .map((it) => (it.isMajor ? `🚀 **${it.shortDelivery}**` : it.shortDelivery))
-          .join(' · ');
-
-        if (rowsByDay.has(day.dayNumber)) {
-          // Si ya existe el día, verificar si ya incluye este delivery
-          const current = rowsByDay.get(day.dayNumber);
-          if (!current.text.includes(day.items[0]?.shortDelivery?.slice(0, 15) || '')) {
-            rowsByDay.set(day.dayNumber, {
-              displayDate: day.displayDate,
-              text: `${current.text} · ${deliveryText}`,
-            });
-          }
-        } else {
-          rowsByDay.set(day.dayNumber, {
-            displayDate: day.displayDate,
-            text: deliveryText,
-          });
-        }
-      }
-
-      // Reconstruir tabla ordenada por día
-      const sortedDays = Array.from(rowsByDay.keys()).sort((a, b) => a - b);
-      let newTable = `${monthHeading}\n\n| Fecha | Entrega |\n|---|---|\n`;
-      for (const d of sortedDays) {
-        const r = rowsByDay.get(d);
-        newTable += `| ${r.displayDate} | ${r.text} |\n`;
-      }
-      newTable += '\n';
-
-      content = content.slice(0, monthIndex) + newTable + content.slice(searchLimit);
-    } else {
-      // Mes nuevo: crear sección completa ordenada por día
-      days.sort((a, b) => a.dayNumber - b.dayNumber);
-      let newSection = `\n${monthHeading}\n\n| Fecha | Entrega |\n|---|---|\n`;
-      for (const day of days) {
-        const deliveryText = day.items
-          .map((it) => (it.isMajor ? `🚀 **${it.shortDelivery}**` : it.shortDelivery))
-          .join(' · ');
-        newSection += `| ${day.displayDate} | ${deliveryText} |\n`;
-      }
-
-      const footerIndex = content.lastIndexOf('---');
-      if (footerIndex !== -1) {
-        content = content.slice(0, footerIndex) + newSection + '\n' + content.slice(footerIndex);
-      } else {
-        content += '\n' + newSection;
-      }
+    if (!sectionsMap.has(sortKey)) {
+      sectionsMap.set(sortKey, {
+        heading: `### ${dInfo.monthLong} ${dInfo.year}`,
+        monthName: dInfo.monthLong,
+        year,
+        sortKey,
+        rowsByDay: new Map(),
+      });
     }
+
+    const sec = sectionsMap.get(sortKey);
+    const deliveryText = items
+      .map((it) => (it.isMajor ? `🚀 **${it.shortDelivery}**` : it.shortDelivery))
+      .join(' · ');
+
+    if (sec.rowsByDay.has(dayNumber)) {
+      const current = sec.rowsByDay.get(dayNumber);
+      if (!current.text.includes(items[0]?.shortDelivery?.slice(0, 15) || '')) {
+        sec.rowsByDay.set(dayNumber, {
+          dayNum: dayNumber,
+          displayDate: dInfo.displayDate,
+          text: `${deliveryText} · ${current.text}`,
+        });
+      }
+    } else {
+      sec.rowsByDay.set(dayNumber, {
+        dayNum: dayNumber,
+        displayDate: dInfo.displayDate,
+        text: deliveryText,
+      });
+    }
+  }
+
+  // Ordenar secciones de mes de más reciente a más antigua (descendente)
+  const sortedSections = Array.from(sectionsMap.values()).sort((a, b) => b.sortKey - a.sortKey);
+
+  // Reconstruir el cuerpo
+  let newBody = '\n';
+  for (const sec of sortedSections) {
+    newBody += `${sec.heading}\n\n| Fecha | Entrega |\n|---|---|\n`;
+    // Ordenar días de más reciente a más antiguo (descendente)
+    const sortedDays = Array.from(sec.rowsByDay.values()).sort((a, b) => b.dayNum - a.dayNum);
+    for (const d of sortedDays) {
+      newBody += `| ${d.displayDate} | ${d.text} |\n`;
+    }
+    newBody += '\n';
   }
 
   // Actualizar nota de pie de página
   if (endDateFormatted) {
-    content = content.replace(
+    footer = footer.replace(
       /\*Documento generado a partir del historial completo del repositorio Pro 9 \(29\/06\/2026 – [^)]+\)\.\*/,
       `*Documento generado a partir del historial completo del repositorio Pro 9 (29/06/2026 – ${endDateFormatted}).*`
     );
   }
 
+  content = header.trimEnd() + '\n' + newBody + footer.trimStart();
   fs.writeFileSync(filePath, content, 'utf-8');
 }
 
