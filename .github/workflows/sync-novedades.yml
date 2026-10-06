@@ -2,8 +2,8 @@ name: Actualizar Novedades Pro 9
 
 on:
   schedule:
-    # Se ejecuta todos los lunes a las 08:00 UTC (03:00 hora de Perú)
-    - cron: '0 8 * * 1'
+    # Se ejecuta de lunes a viernes a las 23:00 UTC (18:00 hora de Perú)
+    - cron: '0 23 * * 1-5'
   workflow_dispatch:
     inputs:
       since:
