@@ -51,7 +51,13 @@ export function commitDocs(commitMessage) {
 
 export function pushDocs(remote = config.docsRemote, branch = config.docsBranch) {
   console.log(`\n🚀 [Git] Subiendo cambios a ${remote}/${branch}...`);
-  const res = runCommand(`git push ${remote} ${branch}`);
+  let pushCmd = `git push ${remote} ${branch}`;
+  let options = {};
+  if (process.env.GITHUB_USER && process.env.GITHUB_TOKEN && remote === 'origin') {
+    pushCmd = `git push "https://${process.env.GITHUB_USER}:${process.env.GITHUB_TOKEN}@github.com/buhola/pro9.git" ${branch}`;
+    options = { silent: true };
+  }
+  const res = runCommand(pushCmd, options);
   if (!res.success) {
     throw new Error(`Error al hacer push a ${remote}/${branch}: ${res.stderr || res.error}`);
   }
@@ -61,10 +67,16 @@ export function pushDocs(remote = config.docsRemote, branch = config.docsBranch)
 
 export function deployDocs() {
   console.log(`\n🌐 [Deploy] Ejecutando deploy a GitHub Pages (pnpm deploy)...`);
-  const res = runCommand('pnpm deploy');
+  const deployEnv = {
+    ...process.env,
+    GIT_USER: process.env.GITHUB_USER || process.env.GIT_USER,
+    GIT_PASS: process.env.GITHUB_TOKEN || process.env.GIT_PASS,
+  };
+  const res = runCommand('pnpm deploy', { env: deployEnv });
   if (!res.success) {
     throw new Error(`Error en el deploy: ${res.stderr || res.error}`);
   }
   console.log(`✅ [Deploy] Despliegue completado exitosamente.`);
   return true;
 }
+
