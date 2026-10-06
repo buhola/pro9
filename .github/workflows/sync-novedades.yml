@@ -1,0 +1,80 @@
+name: Actualizar Novedades Pro 9
+
+on:
+  schedule:
+    # Se ejecuta todos los lunes a las 08:00 UTC (03:00 hora de Perú)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      since:
+        description: 'Fecha inicial opcional (YYYY-MM-DD)'
+        required: false
+        default: ''
+      push_changes:
+        description: 'Hacer commit y push a la rama main'
+        type: boolean
+        default: true
+      deploy_pages:
+        description: 'Desplegar a GitHub Pages'
+        type: boolean
+        default: false
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout documentación
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Instalar pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 11.22.0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
+      - name: Instalar dependencias
+        run: pnpm install --frozen-lockfile
+
+      - name: Ejecutar Bot de Novedades
+        env:
+          GIT_USER: ${{ secrets.GIT_USER || 'oauth2' }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+          GIT_REPO: ${{ secrets.GIT_REPO || 'https://git.buho.la/facturaloperu/facturador/Pro9' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          SINCE_ARG=""
+          if [ -n "${{ github.event.inputs.since }}" ]; then
+            SINCE_ARG="--since ${{ github.event.inputs.since }}"
+          fi
+          node scripts/bot/cli.mjs $SINCE_ARG --build
+
+      - name: Confirmar y subir cambios
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.push_changes == 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ .bot-state.json
+          if git diff --staged --quiet; then
+            echo "No hay cambios pendientes."
+          else
+            git commit -m "docs: actualizar novedades de Pro 9 automáticamente"
+            git push origin main
+          fi
+
+      - name: Desplegar a GitHub Pages
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.deploy_pages == 'true' }}
+        env:
+          USE_SSH: false
+          GIT_USER: "git"
+          DEPLOYMENT_BRANCH: "gh-pages"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          pnpm deploy

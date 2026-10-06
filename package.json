@@ -13,7 +13,12 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "bot": "node scripts/bot/cli.mjs",
+    "bot:sync": "node scripts/bot/cli.mjs",
+    "bot:build": "node scripts/bot/cli.mjs --build",
+    "bot:all": "node scripts/bot/cli.mjs --all",
+    "bot:dry-run": "node scripts/bot/cli.mjs --dry-run"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
