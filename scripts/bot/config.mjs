@@ -56,4 +56,7 @@ export const config = {
   // Git / Doc config
   docsRemote: process.env.DOCS_REMOTE || 'origin',
   docsBranch: process.env.DOCS_BRANCH || 'main',
+  githubUser: process.env.GITHUB_USER || '',
+  githubToken: process.env.GITHUB_TOKEN || '',
 };
+
