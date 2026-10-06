@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Resumen
 title: Novedades de Pro 9
 slug: /novedades
-description: "Todo lo nuevo y lo mejorado entre el 29 de junio y el 25 de agosto de 2026: 546 cambios publicados."
+description: "Todo lo nuevo y lo mejorado entre el 29 de junio y el 5 de octubre de 2026: 822 cambios publicados."
 sidebar_custom_props:
   icon: sparkles
 ---
@@ -13,7 +13,7 @@ sidebar_custom_props:
 Resumen, por módulo, de lo que cambió durante el desarrollo de **Pro 9**.
 
 :::info[Periodo]
-**29 de junio – 25 de agosto de 2026** · **546** cambios publicados.
+**29 de junio – 5 de octubre de 2026** · **822** cambios publicados.
 :::
 
 ## Cómo está organizada esta sección

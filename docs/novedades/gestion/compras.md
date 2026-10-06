@@ -11,4 +11,6 @@ slug: /novedades/compras
 - Se respetan los **días de crédito de cada proveedor**.
 - Se permiten valores numéricos con **más de dos decimales**.
 
+- **Nrus**: Convertir NRUS de giro de negocio a régimen con switch propio
+- Editar ApidocsService.php
 ---

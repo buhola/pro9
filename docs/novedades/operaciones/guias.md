@@ -16,4 +16,5 @@ slug: /novedades/guias
 - Se corrigió el campo de cantidad en el modal.
 - Ajuste en la verificación del modo de transporte y en la respuesta del envío.
 
+- **Dispatch**: Ajustar lógica de envío de datos de transporte para cumplir con requisitos de SUNAT
 ---

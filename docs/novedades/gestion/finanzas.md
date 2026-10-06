@@ -14,4 +14,5 @@ slug: /novedades/finanzas
 - El ticket personalizable de nota de venta muestra condición y método de pago.
 - **Métodos de pago**: campo de estado activable con un interruptor, conectado a la lógica de comprobantes.
 
+- **Finances**: Mover gastos diversos a finanzas y ajustar selector de módulos
 ---

@@ -16,4 +16,5 @@ slug: /novedades/whatsapp
 - Número de WhatsApp del superadministrador para notificaciones del sistema.
 - Correcciones del bot: redondeo de IGV, resolución del negocio en el webhook, notas que se arrastraban de comprobantes previos y falsos "cancelados" por palabras sueltas.
 
+- **Módulo WhatsApp**: ahora puedes enviar comprobantes directamente a tu bandeja de Waya usando una URL y token de manera más sencilla.
 ---

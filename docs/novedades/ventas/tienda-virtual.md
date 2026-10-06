@@ -37,4 +37,5 @@ slug: /novedades/tienda-virtual
 - Se agregó la fecha en el listado de pedidos y fecha y hora en el detalle.
 - Modal de información de pedido con más detalle.
 
+- **Tienda Virtual**: ahora se filtran los productos por stock real en cualquier almacén, garantizando que los clientes vean solo lo que está disponible.
 ---

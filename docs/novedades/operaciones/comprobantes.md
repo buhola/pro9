@@ -28,4 +28,7 @@ Si un comprobante es rechazado u observado, consulta el [catálogo de errores SU
 - Al generar una boleta o factura desde una nota de venta, los pagos a crédito se interpretan correctamente.
 - El cliente se precarga automáticamente al generar un comprobante desde una cotización.
 
+- **Módulo Comprobantes**: ahora puedes navegar fácilmente haciendo clic para solucionar el problema de las guías, simplificando el acceso a los documentos necesarios.
+- **Comprobantes**: ahora, los documentos emitidos en modo de prueba llevarán un sello identificador, asegurando que no se confundan con documentos válidos.
+- **Comprobantes**: se limpia automáticamente la información de atributos antes de copiar datos de productos de cotizaciones a facturas, evitando errores en la información.
 ---

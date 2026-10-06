@@ -16,4 +16,6 @@ slug: /novedades/clientes
 - Se corrigieron direcciones duplicadas provenientes de SUNAT y el filtrado de resultados.
 - Se corrigió un error tipográfico en el número de documento.
 
+- **Módulo Personas**: se ha actualizado la identificación para incluir el carnet de extranjería, ampliando la inclusión de identidades.
+- **Módulo Clientes**: la búsqueda de clientes ha sido optimizada, mejorando la carga de datos relacionados y haciéndola más eficiente.
 ---

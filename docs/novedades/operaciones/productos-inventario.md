@@ -34,4 +34,11 @@ slug: /novedades/productos-inventario
 - Se respeta la presentación de los productos vendidos.
 - Se corrigió la verificación de kardex en transferencias.
 
+- **Módulo Productos**: se especificó la clave de caché para optimizar el almacenamiento de la configuración de listado, mejorando el rendimiento general al trabajar con productos.
+- **Módulo Productos**: ahora puedes duplicar productos y registrarlos en la misma sucursal, ahorrando tiempo en la creación de nuevos ítems.
+- **Módulo Productos**: se corrigió un problema donde las series devueltas aparecían como disponibles en el historial, asegurando que la información refleje con precisión el estado del inventario.
+- **Módulo Item**: se añadió la opción de precarga de relaciones de variaciones, lo que acelera el acceso a información relevante al gestionar ítems en el sistema.
+- **Módulo Items**: se añadieron validaciones extras para la subida de archivos y se optimizó la carga de datos, mejorando la experiencia del usuario al gestionar ítems.
+- **Módulo Productos**: se ha ajustado la configuración de afectación de productos, facilitando una gestión más efectiva y precisa.
+- Revert "fix(reporte): en ventas de productos ahora permite traer las nota de venta al filtrar solo por fecha"
 ---

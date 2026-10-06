@@ -20,4 +20,5 @@ slug: /novedades/administracion
 - Verificación de la configuración de correo, tanto por empresa como a nivel de sistema.
 - Mejoras en las tareas programadas para evitar cuellos de botella.
 
+- **Módulo Mi Cuenta**: nuevo módulo que permite a los usuarios gestionar su perfil y preferencias de cuenta.
 ---
