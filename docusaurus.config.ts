@@ -14,8 +14,8 @@ const config: Config = {
     v4: true,
   },
 
-  url: `https://${organizationName}.github.io`,
-  baseUrl: `/${projectName}/`,
+  url: process.env.DOCUSAURUS_URL || `https://${organizationName}.github.io`,
+  baseUrl: process.env.DOCUSAURUS_BASE_URL || `/${projectName}/`,
   organizationName,
   projectName,
   deploymentBranch: 'gh-pages',
