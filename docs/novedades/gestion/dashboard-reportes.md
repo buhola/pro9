@@ -22,4 +22,5 @@ slug: /novedades/dashboard-reportes
 - Mejor manejo de memoria y de errores en los reportes masivos.
 - Bandeja de descargas mejorada.
 
+- **Módulo Dashboard**: se muestra la última respuesta de los módulos sin que sea reemplazada por consultas anteriores, mejorando la visualización de la información crítica.
 ---

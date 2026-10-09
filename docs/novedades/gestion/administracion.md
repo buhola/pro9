@@ -21,4 +21,7 @@ slug: /novedades/administracion
 - Mejoras en las tareas programadas para evitar cuellos de botella.
 
 - **Módulo Mi Cuenta**: nuevo módulo que permite a los usuarios gestionar su perfil y preferencias de cuenta.
+- **Módulo Administrador**: las secciones del dashboard han sido reordenadas para reflejar el orden real de columnas, mejorando la navegación y la accesibilidad de la información relevante.
+- **Módulo Administrador**: ahora podrás ver el manual solo si está disponible públicamente, y se ha habilitado un centro de ayuda en la versión actual para brindar soporte instantáneo.
+- **Módulo Multiusuario**: se implementó una nueva restricción de permisos para el administrador del inquilino al iniciar sesión, asegurando un mayor control de accesos.
 ---

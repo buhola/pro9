@@ -16,4 +16,5 @@ slug: /novedades/api
 - Listas de precios de productos expuestas para venta móvil.
 - Endpoints renombrados para evitar conflictos con la app móvil.
 
+- **Módulo Actualizaciones**: ahora se sincronizan las etiquetas remotas automáticamente durante el proceso de actualización, asegurando que siempre tengas la versión más reciente de los módulos.
 ---

@@ -41,4 +41,6 @@ slug: /novedades/productos-inventario
 - **Módulo Items**: se añadieron validaciones extras para la subida de archivos y se optimizó la carga de datos, mejorando la experiencia del usuario al gestionar ítems.
 - **Módulo Productos**: se ha ajustado la configuración de afectación de productos, facilitando una gestión más efectiva y precisa.
 - Revert "fix(reporte): en ventas de productos ahora permite traer las nota de venta al filtrar solo por fecha"
+- **Módulo Búsqueda de Productos**: ahora puedes buscar productos de manera más eficiente por nombre, código y código de barras, facilitando la localización de artículos en el sistema.
+- **Módulo Productos**: se ha implementado un sistema de regeneración y actualización del filtro de texto en los ítems, mejorando la precisión en las búsquedas de los mismos.
 ---

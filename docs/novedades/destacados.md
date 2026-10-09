@@ -7,7 +7,7 @@ sidebar_custom_props:
 ---
 
 :::tip[Periodo cubierto]
-**29 de junio – 5 de octubre de 2026** · **822** cambios publicados en el desarrollo de Pro 9.
+**29 de junio – 9 de octubre de 2026** · **837** cambios publicados en el desarrollo de Pro 9.
 :::
 
 # ⭐ Lo más destacado
@@ -29,5 +29,10 @@ sidebar_custom_props:
 | [**Modal de variaciones en Vendeya**](/novedades/vendeya-mozo) | Se incorporó un nuevo modal para gestionar variaciones de productos, facilitando la presentación y selección dentro de la app móvil. |
 | [**Agrupamiento de variaciones en atención**](/novedades/vendeya-mozo) | Ahora es posible agrupar variaciones de productos, simplificando la comanda y atención en mesas. |
 | [**Reportes masivos por lotes**](/novedades/dashboard-reportes) | Se implementó la generación en segundo plano para reportes de documentos masivos que excedan el límite, mejorando la eficiencia al procesar grandes volúmenes. |
+| [**Búsqueda avanzada de productos**](/novedades/productos-inventario) | ahora puedes buscar productos de manera más eficiente por nombre, código y código de barras, facilitando la localización de artículos en el sistema. |
+| [**Actualización a versión 9.5**](/novedades/interfaz) | se ha actualizado a la versión 9.5 y las opciones de ayuda contextual han sido ajustadas para mejorar la experiencia del usuario. Las burbujas de ayuda ahora están desactivadas por defecto. |
+| [**Sincronización de etiquetas remotas**](/novedades/api) | ahora se sincronizan las etiquetas remotas automáticamente durante el proceso de actualización, asegurando que siempre tengas la versión más reciente de los módulos. |
+| [**Actualización de filtro en ítems**](/novedades/productos-inventario) | se ha implementado un sistema de regeneración y actualización del filtro de texto en los ítems, mejorando la precisión en las búsquedas de los mismos. |
+| [**Restricción de permisos al iniciar sesión**](/novedades/administracion) | se implementó una nueva restricción de permisos para el administrador del inquilino al iniciar sesión, asegurando un mayor control de accesos. |
 
 ---

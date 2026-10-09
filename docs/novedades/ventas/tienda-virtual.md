@@ -38,4 +38,6 @@ slug: /novedades/tienda-virtual
 - Modal de información de pedido con más detalle.
 
 - **Tienda Virtual**: ahora se filtran los productos por stock real en cualquier almacén, garantizando que los clientes vean solo lo que está disponible.
+- **Módulo Tienda Virtual**: ahora puedes agregar productos a tu carrito directamente desde la vista rápida, facilitando una experiencia de compra más ágil.
+- **Módulo Tienda Virtual**: el sistema ahora ajusta automáticamente el pack de productos según la cantidad disponible en inventario, asegurando que compres solo lo que hay en stock.
 ---

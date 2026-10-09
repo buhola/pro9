@@ -31,4 +31,7 @@ Si un comprobante es rechazado u observado, consulta el [catálogo de errores SU
 - **Módulo Comprobantes**: ahora puedes navegar fácilmente haciendo clic para solucionar el problema de las guías, simplificando el acceso a los documentos necesarios.
 - **Comprobantes**: ahora, los documentos emitidos en modo de prueba llevarán un sello identificador, asegurando que no se confundan con documentos válidos.
 - **Comprobantes**: se limpia automáticamente la información de atributos antes de copiar datos de productos de cotizaciones a facturas, evitando errores en la información.
+- **Módulo Documentos**: ahora podrás buscar el tipo de nota de crédito por nombre en lugar de ID, simplificando el proceso de creación de notas de crédito.
+- **Módulo Comprobantes**: se optimizaron los indicadores de rendimiento de comprobantes e historial de ventas, mejorando la rapidez en la consulta de información.
+- **Módulo Comprobantes**: se corrigió un error que provocaba problemas en el registro de texto enriquecido en el modal de producto, mejorando la funcionalidad de edición.
 ---

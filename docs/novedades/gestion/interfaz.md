@@ -20,4 +20,6 @@ slug: /novedades/interfaz
 - Correcciones de interfaz en modo oscuro (estados de pedido, filtros).
 - Marca visual actualizada a **Pro 9** en toda la aplicación.
 
+- **Configuración del Sistema**: se ha actualizado a la versión 9.5 y las opciones de ayuda contextual han sido ajustadas para mejorar la experiencia del usuario. Las burbujas de ayuda ahora están desactivadas por defecto.
+- **Módulo Sidebar**: se ha eliminado un error asociado a la visualización de SVGs, mejorando la carga de la interfaz en algunos navegadores.
 ---
