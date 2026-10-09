@@ -1,0 +1,55 @@
+# Pipeline de CI/CD para Validación de Novedades y Despliegue en GitLab Pages
+# Facturador Pro 9
+
+stages:
+  - sync
+  - deploy
+
+default:
+  image: node:24-alpine
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@11.22.0 --activate
+    - apk add --no-cache git
+
+# ---------------------------------------------------------------------------
+# 1. Validación y Sincronización de Novedades (Schedule o Manual)
+# ---------------------------------------------------------------------------
+sync-novedades:
+  stage: sync
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+  script:
+    - pnpm install --frozen-lockfile
+    # Consulta el repositorio origen y valida commits
+    - node scripts/bot/cli.mjs --build
+    # Validación si tiene cambios
+    - |
+      if git diff --quiet docs/ .bot-state.json; then
+        echo "✨ No hay cambios pendientes. Todo está actualizado."
+      else
+        echo "📝 Se detectaron novedades. Confirmando cambios en el repositorio..."
+        git config user.name "gitlab-ci-bot"
+        git config user.email "bot@buho.la"
+        git add docs/ .bot-state.json
+        git commit -m "docs: actualizar novedades de Pro 9 automáticamente [skip ci]"
+        git push "https://oauth2:${DOCS_GITLAB_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git" HEAD:${CI_COMMIT_REF_NAME}
+      fi
+
+# ---------------------------------------------------------------------------
+# 2. Despliegue en GitLab Pages
+# ---------------------------------------------------------------------------
+# GitLab Pages requiere que el job se llame 'pages' y que el artefacto sea 'public/'
+pages:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  script:
+    - pnpm install --frozen-lockfile
+    - pnpm build
+    - rm -rf public
+    - mv build public
+  artifacts:
+    paths:
+      - public
