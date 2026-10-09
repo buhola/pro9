@@ -198,6 +198,8 @@ async function main() {
   // Actualizar cronología
   updateCronologiaDoc(itemsByDate, {
     endDateFormatted: lastDateInfo.numericDate,
+    totalChanges: newTotalChanges,
+    endDateStr: lastDateInfo.fullSpanish,
   });
   console.log('  ✅ Línea de tiempo actualizada (docs/novedades/cronologia.md)');
 

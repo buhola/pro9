@@ -380,9 +380,54 @@ export function humanizeCommit(title) {
   // Detectar si es un cambio mayor (para destacados)
   const isMajor = /^(feat\((account|tienda|pos|inventory|guías|whatsapp|marketplace|finances|settings|reportes)\)|feat:.*modulo)/i.test(title);
 
+  // Clasificación de tipo según estilo 66text (new / tweak / fix)
+  const typeInfo = detectChangeType(title, userDescription);
+
   return {
     userDescription,
     shortDelivery,
     isMajor,
+    type: typeInfo.type,
+    badgeClass: typeInfo.badgeClass,
+    typeTitle: typeInfo.title,
   };
 }
+
+/**
+ * Clasifica si el cambio es una novedad (new), mejora (tweak) o corrección (fix)
+ */
+export function detectChangeType(title, description = '') {
+  const combined = `${title} ${description}`.toLowerCase();
+
+  // Fix / Corrección
+  if (
+    /^(fix\b|revert\b)/i.test(title) ||
+    /\b(corregid[oa]|corrige|corrección|error|fall[ao]|bug|solución|solucionado|repara|reparado|no se duplica|no duplica)\b/i.test(combined)
+  ) {
+    return {
+      type: 'fix',
+      badgeClass: 'badge-fix',
+      title: 'Corrección',
+    };
+  }
+
+  // New / Nuevo
+  if (
+    /^feat\b/i.test(title) ||
+    /\b(nuevo|nueva|nuevas|nuevos|se incorpora|se añade|se crea|soporte para|módulo|nuevo botón|nueva opción|disponible|arranque)\b/i.test(combined)
+  ) {
+    return {
+      type: 'new',
+      badgeClass: 'badge-new',
+      title: 'Nuevo',
+    };
+  }
+
+  // Tweak / Mejora (por defecto)
+  return {
+    type: 'tweak',
+    badgeClass: 'badge-tweak',
+    title: 'Mejora',
+  };
+}
+

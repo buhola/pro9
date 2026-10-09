@@ -37,7 +37,7 @@ export async function explainCommitsWithAI(commitList) {
   // Si no hay proveedor de IA configurado, usar motor de reglas
   if (config.aiProvider === 'rules' || (!config.geminiApiKey && !config.openaiApiKey && !config.aiBaseUrl)) {
     return commitList.map((c) => {
-      const { userDescription, shortDelivery, isMajor } = humanizeCommit(c.title);
+      const { userDescription, shortDelivery, isMajor, type, badgeClass, typeTitle } = humanizeCommit(c.title);
       const moduleKey = classifyModule(c.title, c.sourceFiles || []);
       return {
         id: c.id,
@@ -48,6 +48,9 @@ export async function explainCommitsWithAI(commitList) {
         shortDelivery,
         moduleKey: normalizeModuleKey(moduleKey),
         isMajor,
+        type,
+        badgeClass,
+        typeTitle,
       };
     });
   }
@@ -172,6 +175,9 @@ ${JSON.stringify(promptInput, null, 2)}`;
       shortDelivery: aiItem.shortDelivery || fallbackRules.shortDelivery,
       moduleKey: normalizeModuleKey(aiItem.moduleKey || classifyModule(c.title, c.sourceFiles || [])),
       isMajor: aiItem.isMajor !== undefined ? aiItem.isMajor : fallbackRules.isMajor,
+      type: fallbackRules.type,
+      badgeClass: fallbackRules.badgeClass,
+      typeTitle: fallbackRules.typeTitle,
     };
   });
 }

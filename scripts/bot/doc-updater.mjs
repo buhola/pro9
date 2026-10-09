@@ -84,131 +84,107 @@ export function updateDestacadosDoc({ startDateStr = '29 de junio', endDateStr, 
   fs.writeFileSync(filePath, content, 'utf-8');
 }
 
-const SPANISH_MONTH_MAP = {
-  enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6,
-  julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12
-};
-
-export function updateCronologiaDoc(itemsByDate = {}, { endDateFormatted } = {}) {
+export function updateCronologiaDoc(
+  itemsByDate = {},
+  { endDateFormatted, totalChanges, startDateStr = '29 de junio de 2026', endDateStr } = {}
+) {
   const filePath = path.resolve(NOVEDADES_DIR, 'cronologia.md');
   if (!fs.existsSync(filePath)) return;
 
   let content = fs.readFileSync(filePath, 'utf-8');
 
-  // Separar cabecera y pie de página
-  const firstHeadingIdx = content.indexOf('### ');
-  const footerIdx = content.lastIndexOf('---');
-
-  let header = firstHeadingIdx !== -1 ? content.slice(0, firstHeadingIdx) : content;
-  let footer = footerIdx !== -1 ? content.slice(footerIdx) : '';
-  let body = firstHeadingIdx !== -1 && footerIdx !== -1 ? content.slice(firstHeadingIdx, footerIdx) : '';
-
-  // Actualizar texto introductorio en el header
-  header = header.replace(
-    /Las entregas más importantes, en el orden en que salieron\./,
-    'Las entregas más importantes, ordenadas de la más reciente a la más antigua.'
-  );
-
-  // Extraer secciones existentes
-  const sectionsMap = new Map();
-  const rawSections = body.split(/(?=### )/).map((s) => s.trim()).filter(Boolean);
-
-  for (const sec of rawSections) {
-    const match = sec.match(/^###\s+([A-Za-záéíóúñ]+)\s+(\d{4})/i);
-    if (!match) continue;
-    const monthName = match[1];
-    const year = parseInt(match[2], 10);
-    const monthNum = SPANISH_MONTH_MAP[monthName.toLowerCase()] || 0;
-    const sortKey = year * 100 + monthNum;
-
-    const rowsByDay = new Map();
-    const rowRegex = /\|\s*(\d+)\s+([a-záéíóúñ]+)\s*\|\s*([^|\n]+)\s*\|/gi;
-    let rMatch;
-    while ((rMatch = rowRegex.exec(sec)) !== null) {
-      const dayNum = parseInt(rMatch[1], 10);
-      rowsByDay.set(dayNum, {
-        dayNum,
-        displayDate: `${rMatch[1]} ${rMatch[2]}`,
-        text: rMatch[3].trim(),
-      });
+  // Actualizar contador en changelog-meta si se especificó totalChanges y endDateStr
+  if (totalChanges && endDateStr) {
+    const metaRegex = /<span>Con <strong>\d+ actualizaciones<\/strong> desde <strong>[^<]+<\/strong>\.<\/span>/;
+    if (metaRegex.test(content)) {
+      content = content.replace(
+        metaRegex,
+        `<span>Con <strong>${totalChanges} actualizaciones</strong> desde <strong>${startDateStr} → ${endDateStr}</strong>.</span>`
+      );
     }
+  }
 
-    sectionsMap.set(sortKey, {
-      heading: `### ${monthName} ${year}`,
-      monthName,
-      year,
-      sortKey,
-      rowsByDay,
+  const metaEndTag = '</div>\n</div>';
+  const metaEndIdx = content.indexOf(metaEndTag);
+  if (metaEndIdx === -1) return;
+
+  const header = content.slice(0, metaEndIdx + metaEndTag.length);
+  const footerIdx = content.lastIndexOf('</div>\n\n---');
+  const footer =
+    footerIdx !== -1
+      ? content.slice(footerIdx + '</div>\n\n'.length)
+      : '---\n\n*Registro de cambios generado a partir del historial completo de entregas de Facturador Pro 9.*\n';
+
+  const body = content.slice(metaEndIdx + metaEndTag.length, footerIdx !== -1 ? footerIdx : content.length);
+
+  // Extraer bloques existentes
+  const blockRegex = /<div className="release-block" id="([^"]+)">([\s\S]*?)<\/ul>\s*<\/div>/g;
+  let m;
+  const blockMap = new Map();
+  while ((m = blockRegex.exec(body)) !== null) {
+    blockMap.set(m[1], {
+      id: m[1],
+      html: m[0].trim(),
     });
   }
 
-  // Agrupar e incorporar nuevos items si fueron provistos
+  // Incorporar nuevos items
+  const weightMap = { new: 1, tweak: 2, fix: 3 };
+
   for (const [dateKey, items] of Object.entries(itemsByDate)) {
     if (!items || items.length === 0) continue;
+
     const dInfo = parseDate(items[0].date);
-    const monthNum = SPANISH_MONTH_MAP[dInfo.monthLong.toLowerCase()] || 0;
-    const year = parseInt(dInfo.year, 10);
-    const sortKey = year * 100 + monthNum;
-    const dayNumber = parseInt(dInfo.day, 10);
+    const dateId = dInfo.dateKey;
+    const fullDate = `${dInfo.day} de ${dInfo.monthLong.toLowerCase()} de ${dInfo.year}`;
+    const displayDate = `${dInfo.displayDate} ${dInfo.year}`;
 
-    if (!sectionsMap.has(sortKey)) {
-      sectionsMap.set(sortKey, {
-        heading: `### ${dInfo.monthLong} ${dInfo.year}`,
-        monthName: dInfo.monthLong,
-        year,
-        sortKey,
-        rowsByDay: new Map(),
-      });
-    }
+    const sortedItems = [...items].sort((a, b) => (weightMap[a.type] || 2) - (weightMap[b.type] || 2));
 
-    const sec = sectionsMap.get(sortKey);
-    const deliveryText = items
-      .map((it) => (it.isMajor ? `🚀 **${it.shortDelivery}**` : it.shortDelivery))
-      .join(' · ');
-
-    if (sec.rowsByDay.has(dayNumber)) {
-      const current = sec.rowsByDay.get(dayNumber);
-      if (!current.text.includes(items[0]?.shortDelivery?.slice(0, 15) || '')) {
-        sec.rowsByDay.set(dayNumber, {
-          dayNum: dayNumber,
-          displayDate: dInfo.displayDate,
-          text: `${deliveryText} · ${current.text}`,
-        });
+    if (blockMap.has(dateId)) {
+      let currentHtml = blockMap.get(dateId).html;
+      let newItemsHtml = '';
+      for (const it of sortedItems) {
+        const text = it.isMajor ? `<strong>${it.shortDelivery}</strong>` : it.shortDelivery;
+        if (!currentHtml.includes(it.shortDelivery)) {
+          newItemsHtml += `    <li className="changelog-item">\n      <span className="badge-changelog ${it.badgeClass || 'badge-tweak'}" title="${it.typeTitle || 'Mejora'}"></span>\n      <div>${text}</div>\n    </li>\n`;
+        }
+      }
+      if (newItemsHtml) {
+        currentHtml = currentHtml.replace('</ul>', `${newItemsHtml}  </ul>`);
+        blockMap.set(dateId, { id: dateId, html: currentHtml });
       }
     } else {
-      sec.rowsByDay.set(dayNumber, {
-        dayNum: dayNumber,
-        displayDate: dInfo.displayDate,
-        text: deliveryText,
-      });
+      let newBlock = `<div className="release-block" id="${dateId}">\n`;
+      newBlock += `  <div className="release-block-header">\n`;
+      newBlock += `    <span className="release-block-title">Actualización del ${fullDate}</span>\n`;
+      newBlock += `    <span className="release-block-date">${displayDate}</span>\n`;
+      newBlock += `  </div>\n\n`;
+      newBlock += `  <ul className="changelog-list">\n`;
+      for (const it of sortedItems) {
+        const text = it.isMajor ? `<strong>${it.shortDelivery}</strong>` : it.shortDelivery;
+        newBlock += `    <li className="changelog-item">\n`;
+        newBlock += `      <span className="badge-changelog ${it.badgeClass || 'badge-tweak'}" title="${it.typeTitle || 'Mejora'}"></span>\n`;
+        newBlock += `      <div>${text}</div>\n`;
+        newBlock += `    </li>\n`;
+      }
+      newBlock += `  </ul>\n</div>`;
+      blockMap.set(dateId, { id: dateId, html: newBlock });
     }
   }
 
-  // Ordenar secciones de mes de más reciente a más antigua (descendente)
-  const sortedSections = Array.from(sectionsMap.values()).sort((a, b) => b.sortKey - a.sortKey);
+  // Ordenar TODOS los bloques estrictamente de más reciente a más antiguo (descendente por fecha)
+  const sortedBlocks = Array.from(blockMap.values()).sort((a, b) => b.id.localeCompare(a.id));
 
-  // Reconstruir el cuerpo
-  let newBody = '\n';
-  for (const sec of sortedSections) {
-    newBody += `${sec.heading}\n\n| Fecha | Entrega |\n|---|---|\n`;
-    // Ordenar días de más reciente a más antiguo (descendente)
-    const sortedDays = Array.from(sec.rowsByDay.values()).sort((a, b) => b.dayNum - a.dayNum);
-    for (const d of sortedDays) {
-      newBody += `| ${d.displayDate} | ${d.text} |\n`;
-    }
-    newBody += '\n';
-  }
+  const newContent =
+    header.trimEnd() +
+    '\n\n' +
+    sortedBlocks.map((b) => b.html).join('\n\n') +
+    '\n\n</div>\n\n' +
+    footer.trim() +
+    '\n';
 
-  // Actualizar nota de pie de página
-  if (endDateFormatted) {
-    footer = footer.replace(
-      /\*Documento generado a partir del historial completo del repositorio Pro 9 \(29\/06\/2026 – [^)]+\)\.\*/,
-      `*Documento generado a partir del historial completo del repositorio Pro 9 (29/06/2026 – ${endDateFormatted}).*`
-    );
-  }
-
-  content = header.trimEnd() + '\n' + newBody + footer.trimStart();
-  fs.writeFileSync(filePath, content, 'utf-8');
+  fs.writeFileSync(filePath, newContent, 'utf-8');
 }
 
 export function updateModuleDocs(items) {
