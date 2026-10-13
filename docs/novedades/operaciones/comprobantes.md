@@ -34,4 +34,5 @@ Si un comprobante es rechazado u observado, consulta el [catálogo de errores SU
 - **Módulo Documentos**: ahora podrás buscar el tipo de nota de crédito por nombre en lugar de ID, simplificando el proceso de creación de notas de crédito.
 - **Módulo Comprobantes**: se optimizaron los indicadores de rendimiento de comprobantes e historial de ventas, mejorando la rapidez en la consulta de información.
 - **Módulo Comprobantes**: se corrigió un error que provocaba problemas en el registro de texto enriquecido en el modal de producto, mejorando la funcionalidad de edición.
+- **Módulo Validación de Documentos**: se incorporó un mecanismo para gestionar el estado de los documentos de acuerdo al plazo de envío, mejorando el flujo de trabajo.
 ---

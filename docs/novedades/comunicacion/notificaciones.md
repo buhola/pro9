@@ -13,4 +13,6 @@ slug: /novedades/notificaciones
 - Notificaciones de comprobantes controladas por un interruptor en la configuración.
 - Se corrigió el parpadeo del indicador de notificaciones.
 
+- **Documentación**: las rutas de ventas están ahora vinculadas a la documentación de ayuda, brindándote un acceso fácil a información relevante desde el sistema.
+- **Módulo Validador**: se mejora la validación para no cambiar a registrado el CDR aceptado que ya existe en el sistema, evitando confusiones y asegurando un manejo adecuado de los registros.
 ---

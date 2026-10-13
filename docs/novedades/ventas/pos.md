@@ -27,4 +27,5 @@ slug: /novedades/pos
 - **Corrección en Comprobantes en POS**: se reestablece la nota de venta como comprobante por defecto en el sistema de punto de venta, facilitando la operativa diaria.
 - **Nuevas Opciones en Descuentos**: ahora se permite seleccionar descuentos tanto por monto como por porcentaje en el punto de venta, brindando mayor flexibilidad en promociones y ventas.
 - **Módulo Punto de Venta**: ahora los vendedores deben respetar los límites de descuento establecidos, protegiendo así la rentabilidad y evitando errores al procesar ventas.
+- **Módulo POS**: se añade una guía con novedades sobre cobros, métodos de pago y propinas, proporcionando información útil para una correcta gestión en el uso del punto de venta.
 ---

@@ -40,4 +40,6 @@ slug: /novedades/tienda-virtual
 - **Tienda Virtual**: ahora se filtran los productos por stock real en cualquier almacén, garantizando que los clientes vean solo lo que está disponible.
 - **Módulo Tienda Virtual**: ahora puedes agregar productos a tu carrito directamente desde la vista rápida, facilitando una experiencia de compra más ágil.
 - **Módulo Tienda Virtual**: el sistema ahora ajusta automáticamente el pack de productos según la cantidad disponible en inventario, asegurando que compres solo lo que hay en stock.
+- **Módulo Ecommerce**: se solucionó el manejo de moneda extranjera (USD) en el detalle, buscador y carrito, permitiendo que los usuarios vean los precios correctos según la moneda de su elección.
+- **Módulo Ecommerce**: el contador y el encabezado del carrito ahora se actualizan en tiempo real al eliminar o modificar productos, asegurando que siempre tengas información precisa sobre tus compras.
 ---

@@ -14,4 +14,5 @@ slug: /novedades/otros-modulos
 - **Soporte técnico**: alineación de columnas en el listado y en el panel de detalle.
 - **Preventa**: se puede generar una cotización o un pedido aunque el dólar esté desactivado.
 
+- **Módulo Manual de Configuración**: documentación mejorada para facilitar la configuración de PHP, MariaDB y Redis en el entorno de Docker.
 ---

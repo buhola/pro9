@@ -16,4 +16,5 @@ slug: /novedades/pagos
 - Guardado de pasarelas desacoplado del botón *Guardar*, para evitar cambios accidentales.
 - Máscara del token cambiada a asteriscos, con longitud correcta.
 
+- **Módulo Pagos**: reorganización de los métodos de pago mediante una interfaz intuitiva de arrastrar y soltar, facilitando personalizar la forma en que los clientes pueden pagar sus compras.
 ---

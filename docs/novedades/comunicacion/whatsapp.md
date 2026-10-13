@@ -17,4 +17,6 @@ slug: /novedades/whatsapp
 - Correcciones del bot: redondeo de IGV, resolución del negocio en el webhook, notas que se arrastraban de comprobantes previos y falsos "cancelados" por palabras sueltas.
 
 - **Módulo WhatsApp**: ahora puedes enviar comprobantes directamente a tu bandeja de Waya usando una URL y token de manera más sencilla.
+- **Módulo WhatsApp**: ahora se puede enviar comprobantes a un número específico del panel de QR API, mejorando la comunicación con los clientes.
+- **Módulo WhatsApp**: se agregó una función que permite distinguir entre un número que ya no existe en el panel de QR API y una URL incorrecta, garantizando mayor claridad en el manejo de envíos.
 ---

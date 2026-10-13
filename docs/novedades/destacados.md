@@ -7,7 +7,7 @@ sidebar_custom_props:
 ---
 
 :::tip[Periodo cubierto]
-**29 de junio – 9 de octubre de 2026** · **837** cambios publicados en el desarrollo de Pro 9.
+**29 de junio – 13 de octubre de 2026** · **862** cambios publicados en el desarrollo de Pro 9.
 :::
 
 # ⭐ Lo más destacado
@@ -34,5 +34,10 @@ sidebar_custom_props:
 | [**Sincronización de etiquetas remotas**](/novedades/api) | ahora se sincronizan las etiquetas remotas automáticamente durante el proceso de actualización, asegurando que siempre tengas la versión más reciente de los módulos. |
 | [**Actualización de filtro en ítems**](/novedades/productos-inventario) | se ha implementado un sistema de regeneración y actualización del filtro de texto en los ítems, mejorando la precisión en las búsquedas de los mismos. |
 | [**Restricción de permisos al iniciar sesión**](/novedades/administracion) | se implementó una nueva restricción de permisos para el administrador del inquilino al iniciar sesión, asegurando un mayor control de accesos. |
+| [**Importación masiva de transportistas**](/novedades/guias) | ahora es posible importar masivamente transportistas, conductores y vehículos, simplificando la carga de información en la plataforma. |
+| [**Envío de comprobantes por WhatsApp**](/novedades/whatsapp) | ahora se puede enviar comprobantes a un número específico del panel de QR API, mejorando la comunicación con los clientes. |
+| [**Acceso individual a Vendeya**](/novedades/vendeya-mozo) | ahora los administradores pueden permitir que cada usuario use Vendeya, mejorando la gestión de inventarios y ventas. |
+| [**Ordenamiento fácil de métodos de pago**](/novedades/pagos) | reorganización de los métodos de pago mediante una interfaz intuitiva de arrastrar y soltar, facilitando personalizar la forma en que los clientes pueden pagar sus compras. |
+| [**Optimización en el libro de caja**](/novedades/finanzas) | optimización en la actualización del libro de caja, reduciendo el tiempo de procesamiento de 23 minutos a solo 78 segundos para grandes volúmenes de pagos, ahorrando tiempo valioso. |
 
 ---

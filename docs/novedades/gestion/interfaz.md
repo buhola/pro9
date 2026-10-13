@@ -22,4 +22,8 @@ slug: /novedades/interfaz
 
 - **Configuración del Sistema**: se ha actualizado a la versión 9.5 y las opciones de ayuda contextual han sido ajustadas para mejorar la experiencia del usuario. Las burbujas de ayuda ahora están desactivadas por defecto.
 - **Módulo Sidebar**: se ha eliminado un error asociado a la visualización de SVGs, mejorando la carga de la interfaz en algunos navegadores.
+- **Interfaz de Usuario**: se implementó un pie fijo en todos los diálogos y un aviso de favoritos que solo aparece cuando la lista está vacía, mejorando la experiencia de usuario.
+- **Módulo Sistema**: se ha mejorado la visualización de los logos de los métodos de pago y los íconos locales en la página de inicio de sesión, asegurando una experiencia más amigable para los usuarios.
+- **Migraciones**: modificación en el manejo de los métodos de pago para asegurar que se comparen como texto, evitando confusiones y errores en el sistema.
+- **Migraciones**: mejora en la comparación de IDs reservados, asegurando que se procesen correctamente en el sistema.
 ---

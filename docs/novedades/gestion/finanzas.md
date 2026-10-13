@@ -15,4 +15,5 @@ slug: /novedades/finanzas
 - **Métodos de pago**: campo de estado activable con un interruptor, conectado a la lógica de comprobantes.
 
 - **Finances**: Mover gastos diversos a finanzas y ajustar selector de módulos
+- **Módulo Caja**: optimización en la actualización del libro de caja, reduciendo el tiempo de procesamiento de 23 minutos a solo 78 segundos para grandes volúmenes de pagos, ahorrando tiempo valioso.
 ---

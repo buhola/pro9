@@ -11,12 +11,130 @@ sidebar_custom_props:
 <div className="changelog-container">
 
 <div className="changelog-meta">
-  <span>Con <strong>837 actualizaciones</strong> desde <strong>29 de junio de 2026 → 9 de octubre de 2026</strong>.</span>
+  <span>Con <strong>862 actualizaciones</strong> desde <strong>29 de junio de 2026 → 13 de octubre de 2026</strong>.</span>
   <div className="changelog-legend">
     <span className="changelog-legend-item"><span className="badge-changelog badge-new" title="Nuevo"></span> Nuevo</span>
     <span className="changelog-legend-item"><span className="badge-changelog badge-tweak" title="Mejora"></span> Mejora</span>
     <span className="changelog-legend-item"><span className="badge-changelog badge-fix" title="Corrección"></span> Corrección</span>
   </div>
+</div>
+
+<div className="release-block" id="2026-10-13">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 13 de octubre de 2026</span>
+    <span className="release-block-date">13 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div><strong>Optimización en el libro de caja</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Nueva guía de novedades en POS</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección de migraciones para Vendeya</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Ruta correcta para ventana de Vendeya</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Mejora de íconos en el login</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección en comparaciones de migraciones</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección en comparación de reservas</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Formato corregido en comprobantes</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección en formulario de guías</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Mejora en validación de CDR</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Nuevos nombres para los logos</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-12">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 12 de octubre de 2026</span>
+    <span className="release-block-date">12 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Envío de comprobantes por WhatsApp</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Acceso individual a Vendeya</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Mejoras en la interfaz de usuario</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Ordenamiento fácil de métodos de pago</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Enlaces de ventas a la documentación</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Distinción de números en WhatsApp</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Envío de IP en órdenes de impresión</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Acceso directo mejorado para Vendeya</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Sincronización del carrito en tiempo real</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-10">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 10 de octubre de 2026</span>
+    <span className="release-block-date">10 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Importación masiva de transportistas</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Soporte a 3 decimales en peso</div>
+    </li>
+  </ul>
 </div>
 
 <div className="release-block" id="2026-10-09">
@@ -29,6 +147,18 @@ sidebar_custom_props:
     <li className="changelog-item">
       <span className="badge-changelog badge-new" title="Nuevo"></span>
       <div><strong>Restricción de permisos al iniciar sesión</strong></div>
+    </li>
+      <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Documentación de configuración en Docker</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Gestión de estado de documentos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección manejo de moneda extranjera</div>
     </li>
   </ul>
 </div>

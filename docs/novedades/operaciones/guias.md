@@ -17,4 +17,7 @@ slug: /novedades/guias
 - Ajuste en la verificación del modo de transporte y en la respuesta del envío.
 
 - **Dispatch**: Ajustar lógica de envío de datos de transporte para cumplir con requisitos de SUNAT
+- **Módulo Gestión de Despachos**: ahora es posible importar masivamente transportistas, conductores y vehículos, simplificando la carga de información en la plataforma.
+- **Módulo Guías de Remisión**: se mejoró el soporte para manejar hasta 3 decimales en el peso total, aumentando la precisión de los datos.
+- **Módulo Guias de Remisión**: se soluciona un inconveniente que impedía cargar el formulario de guías de remisión del transportista, facilitando su uso y mejorando la experiencia del usuario.
 ---
