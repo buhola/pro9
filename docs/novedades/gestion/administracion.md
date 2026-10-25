@@ -25,4 +25,17 @@ slug: /novedades/administracion
 - **Módulo Administrador**: ahora podrás ver el manual solo si está disponible públicamente, y se ha habilitado un centro de ayuda en la versión actual para brindar soporte instantáneo.
 - **Módulo Multiusuario**: se implementó una nueva restricción de permisos para el administrador del inquilino al iniciar sesión, asegurando un mayor control de accesos.
 - **Módulo Logos**: se implementa un nuevo nombre para los logos, evitando que la información anterior se sobrescriba, lo que permite una mejor gestión de los mismos.
+- **Gestión / Administración**: Ahora puede habilitar un descuento global para todos sus clientes desde una única configuración del sistema, facilitando la gestión de promociones para todas sus empresas y las que cree en el futuro.
+- **Módulo Gestión/Administración**: Ahora podrá ver de forma clara el uso actual de los recursos de su plan (como el número de comprobantes emitidos o productos registrados) directamente en su panel principal. Una nueva tarjeta le muestra un resumen visual de sus límites y el consumo actual.
+- **Panel admin**: Manual ya no pasa por revisión de módulos
+- **Panel reseller**: El acceso maestro ya no depende del switch super admin sino de los tenants asignados
+- **Módulo Administración General**: Se ha resuelto un inconveniente al actualizar sus cotizaciones, asegurando que los cálculos de los totales sean siempre correctos y que la información se guarde de forma adecuada.
+- **Módulo Administración**: Al restaurar una versión de demostración, el sistema ahora conservará sus credenciales de inicio de sesión, evitando la necesidad de reintroducirlas.
+- **Módulo Administración**: Se ha añadido la opción para configurar un tipo de descuento por defecto, lo que le permitirá agilizar la aplicación de descuentos en sus ventas.
+- **Módulo Administración**: Nueva guía disponible para ayudarle a configurar Google Maps en el sistema, facilitando la gestión de ubicaciones o direcciones relevantes para su negocio.
+- **Gestión/Administración**: Se realizaron actualizaciones internas para mejorar la seguridad y estabilidad del sistema.
+- **Gestión/Administración**: Los usuarios con perfil de revendedor ahora pueden personalizar el icono de la pestaña del navegador (favicon) de sus clientes, ofreciendo una experiencia más marca-personalizada.
+- **Gestión/Administración**: Para los usuarios con perfil de revendedor, se ha añadido la capacidad de gestionar configuraciones globales importantes como si fueran módulos, permitiendo activar o desactivar funcionalidades a nivel de sistema para sus clientes de manera más controlada.
+- **Módulo Administración**: Mejoramos la visualización de los módulos disponibles en su sistema, facilitando a los administradores identificar rápidamente cuáles están activos y cuáles inactivos para una gestión más clara de las funciones de su negocio.
+- **Módulo Administración**: Para una mayor seguridad, los administradores ahora pueden ocultar o mostrar los campos de usuario y contraseña al configurar conexiones (integraciones) con otros sistemas externos, protegiendo así la información sensible durante la configuración.
 ---

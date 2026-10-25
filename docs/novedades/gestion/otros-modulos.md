@@ -15,4 +15,6 @@ slug: /novedades/otros-modulos
 - **Preventa**: se puede generar una cotización o un pedido aunque el dólar esté desactivado.
 
 - **Módulo Manual de Configuración**: documentación mejorada para facilitar la configuración de PHP, MariaDB y Redis en el entorno de Docker.
+- **Otros Módulos**: Hemos actualizado nuestra documentación interna, incluyendo la cronología de novedades y secciones sobre notificaciones y WhatsApp, para que siempre encuentre información al día.
+- **Otros Módulos**: Ahora el formulario de reclamos muestra el dominio de su sistema en el pie de página, brindando mayor transparencia y referencia.
 ---

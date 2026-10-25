@@ -26,4 +26,6 @@ slug: /novedades/vendeya-mozo
 - **Módulo Vendeya**: ahora puedes acceder a la aplicación Vendeya mediante un acceso directo sin complicaciones, mejorando tu experiencia al iniciar sesión.
 - **Módulo Vendeya**: se han corregido las migraciones para asegurar que el módulo de Vendeya funcione correctamente, mejorando así la estabilidad del sistema.
 - **Módulo Vendeya**: la ventana instalada ahora utiliza la ruta adecuada para una mejor integración con Vendeya, mejorando la experiencia del usuario.
+- **Módulo VenDeYa Mozo**: Se solucionó un problema que reiniciaba las mesas con pedidos activos al cambiar la configuración del restaurante, asegurando que su trabajo no se pierda.
+- **Ventas/Vendeya-Mozo**: Se solucionó un error que causaba la eliminación inesperada de productos recién añadidos durante las actualizaciones en tiempo real. Además, ahora la comanda emite un sonido distintivo al recibir un nuevo pedido, asegurando que no se pierda ninguna solicitud.
 ---

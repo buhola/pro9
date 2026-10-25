@@ -47,7 +47,7 @@ export const config = {
   geminiApiKey: process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '',
   openaiApiKey: process.env.OPENAI_API_KEY || '',
   aiBaseUrl: process.env.AI_BASE_URL || '',
-  aiModel: process.env.AI_MODEL || (process.env.GEMINI_API_KEY ? 'gemini-2.0-flash' : 'gpt-4o-mini'),
+  aiModel: process.env.AI_MODEL || (process.env.GEMINI_API_KEY ? 'gemini-2.5-flash' : 'gpt-4o-mini'),
   aiProvider: process.env.AI_PROVIDER || (
     process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY ? 'gemini' :
     process.env.OPENAI_API_KEY ? 'openai' : 'rules'

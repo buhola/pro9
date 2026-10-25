@@ -158,7 +158,8 @@ ${JSON.stringify(promptInput, null, 2)}`;
     throw new Error('No valid AI provider configured');
   }
 
-  const parsed = JSON.parse(jsonStr);
+  const cleanedJsonStr = jsonStr.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+  const parsed = JSON.parse(cleanedJsonStr);
   const items = Array.isArray(parsed)
     ? parsed
     : (parsed.items || parsed.commits || Object.values(parsed).find(Array.isArray) || []);

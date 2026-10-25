@@ -23,4 +23,6 @@ slug: /novedades/dashboard-reportes
 - Bandeja de descargas mejorada.
 
 - **Módulo Dashboard**: se muestra la última respuesta de los módulos sin que sea reemplazada por consultas anteriores, mejorando la visualización de la información crítica.
+- **Módulo Dashboard y Reportes**: Se ha solucionado un inconveniente que podía presentarse en el reporte general de productos, asegurando que ahora siempre muestre la información completa y correcta.
+- **Módulo Reportes y Tablero de Control**: Sus reportes de Excel ahora incluyen las boletas y facturas anuladas, y las resaltan claramente para una mejor trazabilidad y control financiero.
 ---

@@ -43,4 +43,8 @@ slug: /novedades/productos-inventario
 - Revert "fix(reporte): en ventas de productos ahora permite traer las nota de venta al filtrar solo por fecha"
 - **Módulo Búsqueda de Productos**: ahora puedes buscar productos de manera más eficiente por nombre, código y código de barras, facilitando la localización de artículos en el sistema.
 - **Módulo Productos**: se ha implementado un sistema de regeneración y actualización del filtro de texto en los ítems, mejorando la precisión en las búsquedas de los mismos.
+- **Módulo Productos e Inventario**: Cuando genere un reporte de inventario y no se encuentren resultados que coincidan con sus criterios de búsqueda, el sistema ahora mostrará un mensaje claro indicando esta situación, en lugar de una pantalla vacía.
+- **Inventario**: Nueva respuesta para reporte si no encuentra resultado
+- **Operaciones / Productos e Inventario**: A partir de ahora, los productos 'padre' que tienen variaciones (como diferentes tallas o colores) no generarán movimientos de inventario por sí mismos, sino que el stock se gestionará únicamente a nivel de sus variaciones. Esto simplifica el control de inventario para productos complejos.
+- **Productos**: Nueva alerta para código sunat
 ---

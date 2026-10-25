@@ -11,12 +11,346 @@ sidebar_custom_props:
 <div className="changelog-container">
 
 <div className="changelog-meta">
-  <span>Con <strong>862 actualizaciones</strong> desde <strong>29 de junio de 2026 → 13 de octubre de 2026</strong>.</span>
+  <span>Con <strong>926 actualizaciones</strong> desde <strong>29 de junio de 2026 → 23 de octubre de 2026</strong>.</span>
   <div className="changelog-legend">
     <span className="changelog-legend-item"><span className="badge-changelog badge-new" title="Nuevo"></span> Nuevo</span>
     <span className="changelog-legend-item"><span className="badge-changelog badge-tweak" title="Mejora"></span> Mejora</span>
     <span className="changelog-legend-item"><span className="badge-changelog badge-fix" title="Corrección"></span> Corrección</span>
   </div>
+</div>
+
+<div className="release-block" id="2026-10-23">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 23 de octubre de 2026</span>
+    <span className="release-block-date">23 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Revendedores gestionan configuraciones globales</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Mejor gestión de módulos activos.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Seguridad en credenciales de integración.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Vendeya Mozo: productos y sonidos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Credenciales SUNAT unificadas y seguras</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>App actualizada para revendedores</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Placa de vehículo en guías de remisión.</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Edición de nombres de producto mejorada.</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-22">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 22 de octubre de 2026</span>
+    <span className="release-block-date">22 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Revendedores personalizan favicon</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Mejora seguridad y estabilidad</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Mensaje de error 404 más claro</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-21">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 21 de octubre de 2026</span>
+    <span className="release-block-date">21 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Reportes Excel muestran documentos anulados</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Conexión WhatsApp con Waya Cloud</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Pago opcional en cotizaciones de venta</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Reportes de pagos más precisos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección en Venta Rápida</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Descuentos de cotización se respetan</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Cotizaciones y contratos: pagos opcionales</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-20">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 20 de octubre de 2026</span>
+    <span className="release-block-date">20 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Adjuntar imágenes desde productos</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Pagos en comprobantes más ágiles</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Nueva alerta para código sunat</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Comprobante por defecto en Punto de Venta</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Configurar tipo de descuento por defecto</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Nueva guía de Google Maps</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Guías actualizadas para sistema estable</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Notificaciones WhatsApp muestran valores correctos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Totales de cotizaciones siempre correctos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div><strong>Nueva alerta para código SUNAT</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección en variaciones de productos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Demo conserva credenciales de acceso</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-19">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 19 de octubre de 2026</span>
+    <span className="release-block-date">19 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Adjuntar y exportar imágenes de productos</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Mesas con pedidos no se reinician</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Paquetes de productos más fáciles de publicar</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Inventario y Kardex siempre sincronizados</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-17">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 17 de octubre de 2026</span>
+    <span className="release-block-date">17 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Guía de puntos en POS publicada</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Plazo de crédito en cotizaciones</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-16">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 16 de octubre de 2026</span>
+    <span className="release-block-date">16 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Nueva respuesta para reporte si no encuentra resultado</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Pagos estandarizados en formularios</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Inventario de productos con variaciones</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Variaciones en compras y fechas de pago</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Moneda de cotización se mantiene</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Crédito en órdenes de compra</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Descripción de bancos en PDFs</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Fiabilidad en integración WhatsApp</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Mejora trazabilidad de inventario (Kardex)</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-15">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 15 de octubre de 2026</span>
+    <span className="release-block-date">15 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Límite de almacenamiento más visible</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Reporte general de productos corregido.</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Notas de crédito/débito para comprobantes externos.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Nota de crédito/débito para comprobantes de otro sistema</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div><strong>Visualización de límites de su plan.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Mayor control en cobros de caja</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div><strong>Cajas con total teórico y acciones.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Impresión de documentos en formato correcto.</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Reportes de inventario con mensaje de sin resultados.</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Manual ya no pasa por revisión de módulos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>El acceso maestro ya no depende del switch super admin sino de los...</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-14">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 14 de octubre de 2026</span>
+    <span className="release-block-date">14 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Dominio en pie de formulario de reclamos</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Filtro de productos por marca en Tienda Virtual</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Descuento global para todos los clientes</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Stock de packs correcto en Tienda Virtual</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Cobros POS más rápidos</div>
+    </li>
+  </ul>
 </div>
 
 <div className="release-block" id="2026-10-13">
@@ -69,6 +403,18 @@ sidebar_custom_props:
     <li className="changelog-item">
       <span className="badge-changelog badge-fix" title="Corrección"></span>
       <div>Nuevos nombres para los logos</div>
+    </li>
+      <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Documentación actualizada</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Menú de configuraciones móvil mejorado</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Carrito de compras siempre exacto</div>
     </li>
   </ul>
 </div>

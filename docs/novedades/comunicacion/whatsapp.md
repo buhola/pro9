@@ -19,4 +19,7 @@ slug: /novedades/whatsapp
 - **Módulo WhatsApp**: ahora puedes enviar comprobantes directamente a tu bandeja de Waya usando una URL y token de manera más sencilla.
 - **Módulo WhatsApp**: ahora se puede enviar comprobantes a un número específico del panel de QR API, mejorando la comunicación con los clientes.
 - **Módulo WhatsApp**: se agregó una función que permite distinguir entre un número que ya no existe en el panel de QR API y una URL incorrecta, garantizando mayor claridad en el manejo de envíos.
+- **Comunicación / WhatsApp**: Optimizamos la integración con WhatsApp para que el sistema identifique correctamente el estado de su servicio, mejorando la fiabilidad de sus comunicaciones.
+- **Comunicación por WhatsApp**: Se ha corregido un detalle en las notificaciones de WhatsApp relacionadas con pagos, asegurando que los mensajes muestren la información correcta (como montos y fechas) en lugar de códigos o variables.
+- **Comunicación/WhatsApp**: Mejoramos la conexión con Waya. Ahora la integración con su sistema acepta las bandejas de WhatsApp Cloud, lo que amplía las opciones para gestionar sus comunicaciones.
 ---

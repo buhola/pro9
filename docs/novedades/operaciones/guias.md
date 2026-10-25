@@ -20,4 +20,5 @@ slug: /novedades/guias
 - **Módulo Gestión de Despachos**: ahora es posible importar masivamente transportistas, conductores y vehículos, simplificando la carga de información en la plataforma.
 - **Módulo Guías de Remisión**: se mejoró el soporte para manejar hasta 3 decimales en el peso total, aumentando la precisión de los datos.
 - **Módulo Guias de Remisión**: se soluciona un inconveniente que impedía cargar el formulario de guías de remisión del transportista, facilitando su uso y mejorando la experiencia del usuario.
+- **Módulo Guías**: La información de la placa del vehículo ahora se incluye correctamente en el formato digital (XML) de sus guías de remisión para traslados tipo M1/L, asegurando la validez y correcta presentación de sus documentos.
 ---

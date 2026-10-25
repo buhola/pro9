@@ -7,7 +7,7 @@ sidebar_custom_props:
 ---
 
 :::tip[Periodo cubierto]
-**29 de junio – 13 de octubre de 2026** · **862** cambios publicados en el desarrollo de Pro 9.
+**29 de junio – 23 de octubre de 2026** · **926** cambios publicados en el desarrollo de Pro 9.
 :::
 
 # ⭐ Lo más destacado
@@ -39,5 +39,11 @@ sidebar_custom_props:
 | [**Acceso individual a Vendeya**](/novedades/vendeya-mozo) | ahora los administradores pueden permitir que cada usuario use Vendeya, mejorando la gestión de inventarios y ventas. |
 | [**Ordenamiento fácil de métodos de pago**](/novedades/pagos) | reorganización de los métodos de pago mediante una interfaz intuitiva de arrastrar y soltar, facilitando personalizar la forma en que los clientes pueden pagar sus compras. |
 | [**Optimización en el libro de caja**](/novedades/finanzas) | optimización en la actualización del libro de caja, reduciendo el tiempo de procesamiento de 23 minutos a solo 78 segundos para grandes volúmenes de pagos, ahorrando tiempo valioso. |
+| [**Dominio en pie de formulario de reclamos**](/novedades/otros-modulos) | Ahora el formulario de reclamos muestra el dominio de su sistema en el pie de página, brindando mayor transparencia y referencia. |
+| [**Filtro de productos por marca en Tienda Virtual**](/novedades/tienda-virtual) | Implementamos una nueva forma de filtrar productos por marca en su Tienda Virtual, con URLs amigables que mejoran la experiencia de compra de sus clientes y la visibilidad en los buscadores. |
+| [**Descuento global para todos los clientes**](/novedades/administracion) | Ahora puede habilitar un descuento global para todos sus clientes desde una única configuración del sistema, facilitando la gestión de promociones para todas sus empresas y las que cree en el futuro. |
+| [**Límite de almacenamiento más visible**](/novedades/administracion) | En el panel de gestión de almacenamiento, ahora verá el límite de espacio de forma más clara, mostrándose solo cuando este ha sido configurado para su cuenta. Si no hay un límite explícito, se visualizará directamente el uso de disco. |
+| [**Visualización de límites de su plan.**](/novedades/administracion) | Ahora podrá ver de forma clara el uso actual de los recursos de su plan (como el número de comprobantes emitidos o productos registrados) directamente en su panel principal. Una nueva tarjeta le muestra un resumen visual de sus límites y el consumo actual. |
+| [**Cajas con total teórico y acciones.**](/novedades/pos) | En el listado de cajas, ahora encontrará una nueva columna que muestra el 'Total Teórico', facilitando la conciliación de sus movimientos de caja. Además, se han agregado nuevas opciones al menú desplegable para realizar acciones más rápidamente. |
 
 ---

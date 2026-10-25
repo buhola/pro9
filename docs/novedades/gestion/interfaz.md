@@ -26,4 +26,6 @@ slug: /novedades/interfaz
 - **Módulo Sistema**: se ha mejorado la visualización de los logos de los métodos de pago y los íconos locales en la página de inicio de sesión, asegurando una experiencia más amigable para los usuarios.
 - **Migraciones**: modificación en el manejo de los métodos de pago para asegurar que se comparen como texto, evitando confusiones y errores en el sistema.
 - **Migraciones**: mejora en la comparación de IDs reservados, asegurando que se procesen correctamente en el sistema.
+- **Interfaz del Sistema**: Mejoramos la apariencia del menú desplegable de configuraciones para que sea más claro y fácil de usar en dispositivos móviles.
+- **Gestión/Interfaz**: Se mejoró el mensaje en la página de error (404) para ayudarle a entender que la dirección web que ingresó podría ser incorrecta y cómo solucionarlo, facilitando la navegación.
 ---

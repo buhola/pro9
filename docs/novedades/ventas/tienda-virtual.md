@@ -42,4 +42,7 @@ slug: /novedades/tienda-virtual
 - **Módulo Tienda Virtual**: el sistema ahora ajusta automáticamente el pack de productos según la cantidad disponible en inventario, asegurando que compres solo lo que hay en stock.
 - **Módulo Ecommerce**: se solucionó el manejo de moneda extranjera (USD) en el detalle, buscador y carrito, permitiendo que los usuarios vean los precios correctos según la moneda de su elección.
 - **Módulo Ecommerce**: el contador y el encabezado del carrito ahora se actualizan en tiempo real al eliminar o modificar productos, asegurando que siempre tengas información precisa sobre tus compras.
+- **Ventas / Tienda Virtual**: Corregimos un problema en el carrito de compras para que la cantidad de productos seleccionados se conserve correctamente al refrescar la página, asegurando que los totales siempre sean exactos, incluso con productos en diferentes monedas.
+- **Ventas / Tienda Virtual**: Aseguramos que el inventario de conjuntos y packs de productos en su Tienda Virtual se calcule correctamente, basándose en la disponibilidad de sus componentes individuales, evitando desajustes de stock.
+- **Ventas / Tienda Virtual**: Implementamos una nueva forma de filtrar productos por marca en su Tienda Virtual, con URLs amigables que mejoran la experiencia de compra de sus clientes y la visibilidad en los buscadores.
 ---

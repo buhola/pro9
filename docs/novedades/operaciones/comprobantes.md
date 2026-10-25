@@ -35,4 +35,8 @@ Si un comprobante es rechazado u observado, consulta el [catálogo de errores SU
 - **Módulo Comprobantes**: se optimizaron los indicadores de rendimiento de comprobantes e historial de ventas, mejorando la rapidez en la consulta de información.
 - **Módulo Comprobantes**: se corrigió un error que provocaba problemas en el registro de texto enriquecido en el modal de producto, mejorando la funcionalidad de edición.
 - **Módulo Validación de Documentos**: se incorporó un mecanismo para gestionar el estado de los documentos de acuerdo al plazo de envío, mejorando el flujo de trabajo.
+- **Módulo Comprobantes**: Se ha corregido un problema por el cual al imprimir documentos, el sistema no siempre entregaba el formato de impresión que se había seleccionado. Ahora, cada impresión se generará con el formato que usted eligió.
+- **Notas**: Nota de crédito/débito para comprobantes de otro sistema
+- **Operaciones / Comprobantes**: Corregimos un detalle importante: ahora, al generar un comprobante a partir de una cotización, la moneda (dólares) y las cantidades se mantendrán exactamente como las definió en su cotización original, evitando errores inesperados.
+- **Operaciones/Comprobantes**: Se solucionó un problema para asegurar que todos los descuentos aplicados en una cotización se mantengan correctamente al generar un comprobante a partir de ella.
 ---
