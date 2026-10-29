@@ -33,4 +33,6 @@ slug: /novedades/pos
 - **Ventas / POS**: Ahora está disponible la guía completa sobre cómo acumular y canjear puntos por compras realizadas a través del Punto de Venta. Esta documentación le ayudará a entender y aprovechar al máximo esta funcionalidad.
 - **Ventas/POS**: Al crear una cotización o contrato, ya no se asigna un método de pago por defecto, lo que le da mayor flexibilidad. Además, los documentos PDF de cotizaciones y contratos ya no mostrarán la sección de 'Tipo de Pago' o 'Pagos' si no se ha registrado ningún pago, haciendo el documento más limpio y relevante.
 - **Módulo Ventas/POS**: Se corrigió un detalle al editar artículos en documentos de venta, cotizaciones o notas de venta. Ahora, cuando necesite reemplazar el nombre de un producto, el campo aparecerá vacío y listo para que ingrese el nuevo nombre, sin confusiones.
+- **Ventas y Stock**: Las ventas anticipadas ahora gestionan el stock de sus productos de manera más precisa, evitando descuentos duplicados en el inventario al momento de completar la venta.
+- **Módulo Ventas/POS**: Al realizar el cierre de caja (arqueo), ahora podrá ingresar los montos utilizando la coma decimal, facilitando el registro exacto de su efectivo.
 ---

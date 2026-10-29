@@ -11,12 +11,148 @@ sidebar_custom_props:
 <div className="changelog-container">
 
 <div className="changelog-meta">
-  <span>Con <strong>926 actualizaciones</strong> desde <strong>29 de junio de 2026 → 23 de octubre de 2026</strong>.</span>
+  <span>Con <strong>950 actualizaciones</strong> desde <strong>29 de junio de 2026 → 29 de octubre de 2026</strong>.</span>
   <div className="changelog-legend">
     <span className="changelog-legend-item"><span className="badge-changelog badge-new" title="Nuevo"></span> Nuevo</span>
     <span className="changelog-legend-item"><span className="badge-changelog badge-tweak" title="Mejora"></span> Mejora</span>
     <span className="changelog-legend-item"><span className="badge-changelog badge-fix" title="Corrección"></span> Corrección</span>
   </div>
+</div>
+
+<div className="release-block" id="2026-10-29">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 29 de octubre de 2026</span>
+    <span className="release-block-date">29 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Nuevo formato de ticket en compras.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Vista previa de opciones en Compras.</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Editar precios de venta desde compras.</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Cierre de caja con coma decimal</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Reportes: filtrar por plataformas</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Corrección en nombre de producto en notas.</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-28">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 28 de octubre de 2026</span>
+    <span className="release-block-date">28 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Caracteres especiales en XML</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-27">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 27 de octubre de 2026</span>
+    <span className="release-block-date">27 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Permisos completos de configuración</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div><strong>Gestión simplificada de variaciones</strong></div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Stock de ventas anticipadas preciso</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Precio unitario en cotizaciones actualizado</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Inventario: productos con variaciones</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Pestañas de clientes fijas</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Ajustes internos de módulos</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Decimales correctos en XML</div>
+    </li>
+  </ul>
+</div>
+
+<div className="release-block" id="2026-10-26">
+  <div className="release-block-header">
+    <span className="release-block-title">Actualización del 26 de octubre de 2026</span>
+    <span className="release-block-date">26 oct 2026</span>
+  </div>
+
+  <ul className="changelog-list">
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Alerta por falta de ID en guías</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Alerta de ID en guías y modales</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-new" title="Nuevo"></span>
+      <div>Nombres de productos sin especiales</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-tweak" title="Mejora"></span>
+      <div>Mejoras en documentación para desarrolladores</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Filtro de plan al editar clientes</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Cálculo correcto de notas de crédito</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Alerta de ID en guías corregida</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Campo MTC ya no es obligatorio</div>
+    </li>
+    <li className="changelog-item">
+      <span className="badge-changelog badge-fix" title="Corrección"></span>
+      <div>Kardex muestra stock real correcto</div>
+    </li>
+  </ul>
 </div>
 
 <div className="release-block" id="2026-10-23">

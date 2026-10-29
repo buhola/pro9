@@ -47,4 +47,6 @@ slug: /novedades/productos-inventario
 - **Inventario**: Nueva respuesta para reporte si no encuentra resultado
 - **Operaciones / Productos e Inventario**: A partir de ahora, los productos 'padre' que tienen variaciones (como diferentes tallas o colores) no generarán movimientos de inventario por sí mismos, sino que el stock se gestionará únicamente a nivel de sus variaciones. Esto simplifica el control de inventario para productos complejos.
 - **Productos**: Nueva alerta para código sunat
+- **Productos e Inventario**: Al crear o editar productos, el sistema ahora restringe el uso de caracteres especiales en el nombre, lo que ayuda a mantener la uniformidad y evitar posibles inconvenientes.
+- **Productos e Inventario**: En el reporte Kardex, el saldo de los ajustes a su stock real ahora refleja de forma exacta la cantidad de inventario indicada.
 ---

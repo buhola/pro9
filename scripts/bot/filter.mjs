@@ -13,6 +13,9 @@ const ASSET_PATH_PATTERNS = [
   /^package-lock\.json$/,
   /^composer\.lock$/,
   /^\.gitignore$/,
+  /^resources\/docs\/novedades\//,
+  /^storage\/app\/docs_last_synced_commit\.json$/,
+  /^upgrade-script\.sh$/,
 ];
 
 const IGNORE_TITLE_PATTERNS = [
@@ -25,6 +28,10 @@ const IGNORE_TITLE_PATTERNS = [
   /^chore:\s*update file permissions/i,
   /^chore\(deps\)/i,
   /^wip\b/i,
+  /^docs\(novedades\)/i,
+  /^revert\b/i,
+  /^cambiando imagenes doc/i,
+  /^edit upgrade-script\.sh/i,
 ];
 
 export function isMergeCommit(commit) {

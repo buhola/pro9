@@ -7,7 +7,7 @@ sidebar_custom_props:
 ---
 
 :::tip[Periodo cubierto]
-**29 de junio – 23 de octubre de 2026** · **926** cambios publicados en el desarrollo de Pro 9.
+**29 de junio – 29 de octubre de 2026** · **950** cambios publicados en el desarrollo de Pro 9.
 :::
 
 # ⭐ Lo más destacado
@@ -45,5 +45,9 @@ sidebar_custom_props:
 | [**Límite de almacenamiento más visible**](/novedades/administracion) | En el panel de gestión de almacenamiento, ahora verá el límite de espacio de forma más clara, mostrándose solo cuando este ha sido configurado para su cuenta. Si no hay un límite explícito, se visualizará directamente el uso de disco. |
 | [**Visualización de límites de su plan.**](/novedades/administracion) | Ahora podrá ver de forma clara el uso actual de los recursos de su plan (como el número de comprobantes emitidos o productos registrados) directamente en su panel principal. Una nueva tarjeta le muestra un resumen visual de sus límites y el consumo actual. |
 | [**Cajas con total teórico y acciones.**](/novedades/pos) | En el listado de cajas, ahora encontrará una nueva columna que muestra el 'Total Teórico', facilitando la conciliación de sus movimientos de caja. Además, se han agregado nuevas opciones al menú desplegable para realizar acciones más rápidamente. |
+| [**Permisos completos de configuración**](/novedades/administracion) | Se han habilitado permisos completos para la configuración del sistema, permitiendo a los administradores gestionar todas las opciones disponibles. |
+| [**Gestión simplificada de variaciones**](/novedades/productos-inventario) | Ahora, al gestionar productos con variaciones (como diferentes tallas o colores), solo necesitará ajustar la imagen y el precio específico para cada variación. Los demás detalles se tomarán automáticamente del producto principal, simplificando la administración de su catálogo. |
+| [**Nuevo formato de ticket en compras.**](/novedades/compras) | ahora puede imprimir sus comprobantes de compra en un nuevo formato de ticket, más claro y adaptado a sus necesidades. |
+| [**Editar precios de venta desde compras.**](/novedades/productos-inventario) | ahora puede gestionar y editar los precios de venta de las diferentes presentaciones de un producto directamente desde la sección de Compras, facilitando la actualización de sus artículos. |
 
 ---

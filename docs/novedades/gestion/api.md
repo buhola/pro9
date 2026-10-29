@@ -17,4 +17,5 @@ slug: /novedades/api
 - Endpoints renombrados para evitar conflictos con la app móvil.
 
 - **Módulo Actualizaciones**: ahora se sincronizan las etiquetas remotas automáticamente durante el proceso de actualización, asegurando que siempre tengas la versión más reciente de los módulos.
+- **Gestión de API**: Se realizaron mejoras en la organización de la documentación para desarrolladores, lo que facilita el trabajo con las integraciones y personalizaciones del sistema.
 ---

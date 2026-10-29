@@ -39,4 +39,5 @@ Si un comprobante es rechazado u observado, consulta el [catálogo de errores SU
 - **Notas**: Nota de crédito/débito para comprobantes de otro sistema
 - **Operaciones / Comprobantes**: Corregimos un detalle importante: ahora, al generar un comprobante a partir de una cotización, la moneda (dólares) y las cantidades se mantendrán exactamente como las definió en su cotización original, evitando errores inesperados.
 - **Operaciones/Comprobantes**: Se solucionó un problema para asegurar que todos los descuentos aplicados en una cotización se mantengan correctamente al generar un comprobante a partir de ella.
+- **Comprobantes**: Las notas de crédito ahora calculan correctamente los descuentos que no afectan la base imponible, asegurando la exactitud en sus documentos fiscales.
 ---

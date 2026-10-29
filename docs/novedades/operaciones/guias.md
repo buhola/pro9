@@ -21,4 +21,7 @@ slug: /novedades/guias
 - **Módulo Guías de Remisión**: se mejoró el soporte para manejar hasta 3 decimales en el peso total, aumentando la precisión de los datos.
 - **Módulo Guias de Remisión**: se soluciona un inconveniente que impedía cargar el formulario de guías de remisión del transportista, facilitando su uso y mejorando la experiencia del usuario.
 - **Módulo Guías**: La información de la placa del vehículo ahora se incluye correctamente en el formato digital (XML) de sus guías de remisión para traslados tipo M1/L, asegurando la validez y correcta presentación de sus documentos.
+- **Guías de Remisión**: Se añadió una alerta que le notificará si falta el número de identificación del cliente al generar una guía, ayudándole a completar la información necesaria.
+- **Guías de Remisión**: Se extendieron las alertas para notificarle sobre la falta del número de identificación del cliente también en las ventanas emergentes (modales) al generar sus guías.
+- **Guías de Remisión**: Se corrigió el funcionamiento de las alertas que le informan sobre la falta del número de identificación del cliente, asegurando que operen de forma confiable.
 ---

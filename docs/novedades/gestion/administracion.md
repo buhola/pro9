@@ -38,4 +38,6 @@ slug: /novedades/administracion
 - **Gestión/Administración**: Para los usuarios con perfil de revendedor, se ha añadido la capacidad de gestionar configuraciones globales importantes como si fueran módulos, permitiendo activar o desactivar funcionalidades a nivel de sistema para sus clientes de manera más controlada.
 - **Módulo Administración**: Mejoramos la visualización de los módulos disponibles en su sistema, facilitando a los administradores identificar rápidamente cuáles están activos y cuáles inactivos para una gestión más clara de las funciones de su negocio.
 - **Módulo Administración**: Para una mayor seguridad, los administradores ahora pueden ocultar o mostrar los campos de usuario y contraseña al configurar conexiones (integraciones) con otros sistemas externos, protegiendo así la información sensible durante la configuración.
+- **Administración**: Se añadió un filtro para que los administradores puedan seleccionar el plan adecuado de sus clientes con mayor facilidad al gestionar sus cuentas.
+- **Administración de Empresa**: Se eliminó la obligatoriedad de un campo relacionado con MTC (Ministerio de Transportes y Comunicaciones) en las configuraciones de su empresa, facilitando la gestión de datos.
 ---

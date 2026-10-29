@@ -18,4 +18,5 @@ slug: /novedades/clientes
 
 - **Módulo Personas**: se ha actualizado la identificación para incluir el carnet de extranjería, ampliando la inclusión de identidades.
 - **Módulo Clientes**: la búsqueda de clientes ha sido optimizada, mejorando la carga de datos relacionados y haciéndola más eficiente.
+- **Módulo Clientes**: Ahora, las pestañas dentro del formulario de registro o edición de clientes permanecen fijas y son más fáciles de usar.
 ---
